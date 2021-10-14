@@ -1,0 +1,14 @@
+{
+    "headadmin": "red:H-ADMIN",
+    "admin": "red:ADMIN",
+    "headmoder": "cyan:H-MODER",
+    "moder": "cyan:MODER",
+    "supersponsor": "darkorange:S-SPONSOR",
+    "sponsor": "gold:SPONSOR",
+    "builder": "orange:BUILDER",
+    "elite": "orange:ELITE",
+    "ultra": "red:ULTRA",
+    "gold": "yellow:PREMIUM",
+    "vip": "purple:VIP",
+    "default": "gray:Игрок"
+}
