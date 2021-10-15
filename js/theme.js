@@ -33,6 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (localStorage.getItem("theme") == 'theme-dark') {
 		$('#theme_checkbox').prop('checked', true);
 		theme = 1;
+		skinViewer.dispose();
+		orbitControl.dispose();
+		initializeViewer(theme);
 		icon.classList.remove('fa-sun');
 		icon.classList.add('fa-moon');
 	}
