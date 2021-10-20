@@ -16,6 +16,8 @@ $hash = isset($_GET['hash']) ? $_GET['hash'] : null;
 $discord_token = isset($_GET['discord_token']) ? $_GET['discord_token'] : null;
 $user = isset($_GET['user']) ? $_GET['user'] : null;
 $user_id = isset($_GET['user_id']) ? $_GET['user_id'] : null;
+$silent = isset($_GET['silent']) ? $_GET['silent'] : null;
+$prefix = isset($_GET['prefix']) ? $_GET['prefix'] : null;
 
 if (userDiscordHashCheck($user) != $discord_token) callback('Покупка привилегий', 'Несовпадение хеша, перезагрузите страницу и повторите пожалуйста покупку, либо напишите администрации.');
 
@@ -56,9 +58,12 @@ $GLOBALS['site_mysql']->query('UPDATE dle_users SET money = money-' . $payment .
 
 $server = $server. '_api';
 
+if ($no_prefix) $GLOBALS[$server]->sendCommand('lp user ' . $user . ' meta setprefix "&7[Игрок]&f"');
+
 if ($type == 'hexels') {
-	$message = ' !Поздравляем, вы получили ' . $hexels_count . 'хекселей!';
+	$message = ' !Поздравляем, вы получили ' . $hexels_count . ' хекселей!';
 	$GLOBALS[$server]->sendCommand('money give ' . $user . " " . $hexels_count);
+	$type = $hexels_count . ' ' . $type;
 } else if ($type == 'fly') {
 	$message = ' !Поздравляем, вы получили полёт на 1 месяц!';
 	$GLOBALS[$server]->sendCommand('tfly ' . $user . ' 30d');
@@ -68,8 +73,8 @@ if ($type == 'hexels') {
 }
 
 $GLOBALS[$server]->sendCommand('cmi msg ' . $user . $message);
-$GLOBALS[$server]->sendCommand('cmi broadcast Спасибо ' . $user . ' за приобретение ' . strtoupper($type) . '!');
+if(!$silent) $GLOBALS[$server]->sendCommand('cmi broadcast Спасибо ' . $user . ' за приобретение ' . strtoupper($type) . '!');
 
 $GLOBALS['site_mysql']->query("INSERT INTO log_purchases SET date=:date, nick=:nick, item=:item, server=:server, cost=:cost", [':date'=>date('Y-m-d H:i:s'), ':nick'=>$user, ':item'=> strtoupper($type), ':server'=>substr(strtoupper($server), 0, -4), ':cost'=>$payment]);
 
-callback('Покупка привилегий', 'Вы успешно приобрели ' . strtoupper($type) . '!<br>Привилегия была выдана на сервер ' . substr(strtoupper($server), 0, -4) . '.');
+callback('Покупка привилегий', 'Вы успешно приобрели ' . strtoupper($type) . ' на сервер ' . substr(strtoupper($server), 0, -4) . '.');

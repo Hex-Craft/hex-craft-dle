@@ -4,7 +4,7 @@ if (date(H) == 3) exit();
 
 require_once('/var/www/html/scripts/InitAll.php');
 
-$webhookurl = "https://canary.discord.com/api/webhooks/791794356675805245/6leesQlybVBLhBLxvLwTH2LJBrAvZ3YJjsZnmkqdjBrQjNqW3dFu9rMt4V9sGHjlVi7v";
+$webhookurl = "https://discord.com/api/webhooks/900115601882763314/Cnvk91aYFJpjGDI0ui24xDR9WdZHLYosW2xCqxgV9mb1_j3F-u5NTgFJWkWrQRxLpm7W";
 
 foreach ($server_list as $k => $v) {
     $server_details = $GLOBALS[$k."_api"]->resources();

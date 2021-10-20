@@ -415,6 +415,8 @@ span.arrow_box.serv {
 	margin-left: -175px;
 	z-index: 10;
 	position: absolute;
+	border-radius: 6px;
+	padding: 10px 0;
 }
 .swiper-container {
 	width: 100%;
@@ -541,7 +543,10 @@ ul.drop-vape li a {
 	font-weight: 500;
 	text-transform: none;
 }
-ul.drop-vape { padding: 0; }
+ul.drop-vape {
+	padding: 0;
+	margin: 0;
+}
 ul.drop-vape li a:hover {
 	text-decoration: none;
 	border-bottom: 3px solid #4a82e4
@@ -1641,7 +1646,7 @@ ul.login_menu li {
 .info-panel {
 	border: var(--border);
     border-radius: 6px;
-	padding: 20px;
+	padding: 1rem;
 	margin-bottom: 20px;
 	background-color: var(--input-background);
 }
@@ -2075,4 +2080,145 @@ border-bottom: 4px solid #9ac2e2;
     line-height: 16px;
     font-weight: 100;
     font-size: 16px;
+}
+.badge {
+	display: inline-block;
+    padding: 4px 6px;
+	margin-left: 5px;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+	color: #fff;
+}
+.badge-classic { background-color: #669900; }
+.badge-hitech { background-color: #ec5d61; }
+.badge-magic { background-color: #5260d5; }
+
+/* DONATE OPTIONS */
+
+.form_radio_btn {
+	margin: 10px;
+    width: 200px;
+    height: 100px;
+	background: linear-gradient(to right, #555, #888);
+	border-radius: 6px;
+}
+
+.form_radio_btn input[type=radio] { display: none; }
+
+.form_radio_btn label {
+	display: inline-block;
+    cursor: pointer;
+    padding: 0px 15px;
+    border-radius: 6px;
+    user-select: none;
+    text-align: center;
+    width: 200px;
+    height: 100px;
+    color: #999;
+    font-size: 32px;
+	font-weight: 1000;
+	line-height: 28px;
+	vertical-align: middle;
+    display: table-cell;
+}
+
+.form_radio_btn input[type=radio]:checked + label {
+	background: linear-gradient(to right, #ec5d61, #ffa857);
+	color: white;
+	transition: .5s;
+}
+
+.form_radio_btn input[type=radio]:hover + label {
+	background: #999;
+	color: white;
+	transition: .5s;
+}
+
+.form_radio_btn input[type=radio]:hover:checked + label {
+	background: linear-gradient(to right, #ec5d61, #ffa857);
+	color: white;
+	transition: .5s;
+}
+
+.form_radio_btn label:hover { color: #999; }
+
+.form_radio_btn input[type=radio]:disabled + label {
+	background: #444;
+	color: #666;
+	cursor: default;
+}
+
+.form_radio_blue input[type=radio]:checked + label { background: linear-gradient(45deg, #5260d5, #42a4f3); }
+.form_radio_violet input[type=radio]:checked + label { background: linear-gradient(45deg, #472390, #b75df9); }
+.form_radio_blue input[type=radio]:hover:checked + label { background: linear-gradient(45deg, #5260d5, #42a4f3); }
+.form_radio_violet input[type=radio]:hover:checked + label { background: linear-gradient(45deg, #472390, #b75df9); }
+
+.donate-radios {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.donate-price {
+    margin-bottom: 5px;
+}
+
+input[type=checkbox] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+input[type=checkbox]+label { /* для элемента label, связанного с .custom-checkbox */
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+input[type=checkbox]+label::before { /* создание в label псевдоэлемента before со следующими стилями */
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 70% 70%;
+}
+
+input[type=checkbox]:not(:disabled):not(:checked)+label:hover::before { /* стили при наведении курсора на checkbox */
+  border-color: #b3d7ff;
+}
+
+input[type=checkbox]:not(:disabled):active+label::before { /* стили для активного чекбокса (при нажатии на него) */
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+
+input[type=checkbox]:focus+label::before { /* стили для чекбокса, находящегося в фокусе */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+input[type=checkbox]:focus:not(:checked)+label::before { /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+  border-color: #80bdff;
+}
+
+input[type=checkbox]:checked+label::before { /* стили для чекбокса, находящегося в состоянии checked */
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+input[type=checkbox]:disabled+label::before {
+  background-color: #e9ecef;
 }

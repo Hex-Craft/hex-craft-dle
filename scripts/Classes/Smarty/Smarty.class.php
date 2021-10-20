@@ -628,7 +628,7 @@ class Smarty extends Smarty_Internal_TemplateBase
      *
      * @var string
      */
-    protected $compile_dir = './templates_c/';
+    protected $compile_dir = './scripts/Cache/TemplatesCompiled/';
 
     /**
      * plugins directory

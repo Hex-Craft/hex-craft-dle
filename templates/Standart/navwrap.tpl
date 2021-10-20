@@ -2,22 +2,22 @@
 	<ul id="nav" class="nav-wrap__list menu">
 		<li id="nav_button1"><a href="/" title="Главная"><span class="red-fox">Главная</span></a></li>
 		<div class="dropdown serv">
-		<span class="serv-drop" title="Описание серверов">Сервера</span>
-		<div class="dropdown-content serv">
-			<span class="arrow_box serv"></span>
-			<ul class="drop-vape serv">
-				<li><a href="/classic.html" title="Описание сервера Classic 1.16.2">Classic 1.16.2</a></li>
-				<li><a href="/hitech.html" title="Описание сервера Hi-Tech 1.12.2">Hi-Tech 1.12.2</a></li>
-			</ul>
-		</div>
+			<span class="serv-drop" title="Описание серверов">Сервера</span>
+			<div class="dropdown-content serv">
+				<span class="arrow_box serv"></span>
+				<ul class="drop-vape serv">
+					<li><a href="/classic.html" title="Описание сервера Classic 1.16.2">Classic 1.16.2</a></li>
+					<li><a href="/hitech.html" title="Описание сервера Hi-Tech 1.12.2">Hi-Tech 1.12.2</a></li>
+				</ul>
+			</div>
 		</div>
 		<li id="nav_button2"><a href="/donate.html" title="Привилегии"><span class="red-fox">Привилегии</span></a></li>
 		<li id="nav_button3"><a href="/kits.html" title="Наборы"><span>Наборы</span></a></li>
 		<li id="nav_button4"><a href="/help.html" title="Раздел помощи"><span class="red-fox">Помощь</span></a></li>
 	</ul>
 	<div class="dropdown status-tooltip" style="height: 20px;display: inline-block;position: absolute; margin-left: -10px; margin-top: 25px;">
-		<div class="tooltip-triangle tt-bottom tooltip-triangle-achievements" style="top: 0; left: 2px; border-bottom: 10px solid #333;"></div>
-			<i class="fas fa-ellipsis-h" aria-hidden="true" style="font-size: 20px; line-height: 0;"></i>
+		<div class="tooltip-triangle tt-bottom tooltip-triangle-achievements" style="top: 1px; left: 2px; border-bottom: 10px solid #333;"></div>
+		<i class="fas fa-ellipsis-h" aria-hidden="true" style="font-size: 20px; line-height: 0;"></i>
 		<div class="dropdown-content">
 			<span class="arrow_box"></span>
 			<ul class="drop-vape">
@@ -33,7 +33,7 @@
 	</div>
 	<i id="theme-icon" class="fas fa-sun" style="position: relative; left: 44px; top: 5px; font-size: 24px; color: #828282;"></i>
 	<label class="switch status-tooltip" style="left: 8px;top: 15px;">
-		<input type="checkbox" id="theme_checkbox">
+		<input type="checkbox" id="theme_checkbox" style="position: relative;">
 		<span class="slider round"></span>
 		<div class="tooltip-triangle tt-bottom tooltip-triangle-achievements" style="top: 15px;"></div>
 		<span class="status-tooltiptext tooltip-achievements" style="top: 35px; left: 0; line-height: 30px; width: 120px;">Тёмная тема</span>

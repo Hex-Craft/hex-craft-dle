@@ -10,7 +10,7 @@
 	<meta property="og:url" content="https://hex-craft.ru/">
 	{headers}
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/css/style_main_min.css?=v3">
+	<link rel="stylesheet" href="/css/style_main.min.css?=v5">
 	<!-- <link rel="stylesheet" href="/css/snow.css"> -->
 	<script>
 		function applyTheme(theme) {
