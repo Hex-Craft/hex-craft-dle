@@ -1,6 +1,6 @@
 <?php
 
-define ( 'SCRIPTS_DIR', '/var/www/html/scripts' );
+define ( 'SCRIPTS_DIR', $_SERVER['DOCUMENT_ROOT']."/scripts" );
 define ( 'CONFIG_DIR', SCRIPTS_DIR . '/Config' );
 
 if (!function_exists(json)) {
@@ -9,9 +9,17 @@ if (!function_exists(json)) {
 	}
 }
 
+if (!function_exists(callback)) {
+	function callback($title, $description) {
+		$result = array('answer' => "<script>DLEalert('" . $description . "', '" . $title . "')</script>"); 
+		echo json_encode($result);
+		exit();
+	}
+}
+
 $db_configs = json( CONFIG_DIR . '/Database' );
 $server_list = json( CONFIG_DIR . '/Servers' );
-$perms = json( CONFIG_DIR . '/Prefix' );
+$server_vote = json( CONFIG_DIR . '/SiteVote' );
 
 require_once SCRIPTS_DIR . '/Classes/Database.class.php';
 require_once SCRIPTS_DIR . '/Classes/ServerApi.class.php';
