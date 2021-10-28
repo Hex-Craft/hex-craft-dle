@@ -1,10 +1,10 @@
 <?php
 
-define ( 'SCRIPTS_DIR', $_SERVER['DOCUMENT_ROOT']."/scripts" );
+define ( 'SCRIPTS_DIR', '/var/www/html/scripts' );
 define ( 'CONFIG_DIR', SCRIPTS_DIR . '/Config' );
 
 if (!function_exists(json)) {
-		function json(string $src, $associative = true) {
+	function json(string $src, $associative = true) {
 		return json_decode(file_get_contents($src . ".json"), $associative);
 	}
 }
@@ -19,7 +19,8 @@ if (!function_exists(callback)) {
 
 $db_configs = json( CONFIG_DIR . '/Database' );
 $server_list = json( CONFIG_DIR . '/Servers' );
-$server_vote = json( CONFIG_DIR . '/SiteVote' );
+$perms = json( CONFIG_DIR . '/Prefix' );
+$credentials = json( CONFIG_DIR . '/Creditentials' );
 
 require_once SCRIPTS_DIR . '/Classes/Database.class.php';
 require_once SCRIPTS_DIR . '/Classes/ServerApi.class.php';

@@ -1,4 +1,4 @@
-<div class="static-container" style="padding-bottom: 65px;">
+<div class="static-container">
 	<img src="https://hex-craft.ru/uploads/posts/2020-09/1600077324_kits.png" alt="" class="fr-dib">
 	<div class="news-container">
 	
@@ -22,11 +22,15 @@
 		</a>
 		
 		{if isset($server)}
-			<a class="highslide" href="/img/kits/{$server}/start.png" target="_blank"><img src="/img/kits/{$server}/start.png" alt="" class="fr-dib" style="width: 400px; float: left; margin-top: 20px!important;"></a>
-			<a class="highslide" href="/img/kits/{$server}/vip.png" target="_blank"><img src="/img/kits/{$server}/vip.png" alt="" class="fr-dib" style="width: 400px; float: right; margin-top: 20px!important;"></a>
-			<a class="highslide" href="/img/kits/{$server}/premium.png" target="_blank"><img src="/img/kits/{$server}/premium.png" alt="" class="fr-dib" style="width: 400px; float: left; margin-top: 20px!important;"></a>
-			<a class="highslide" href="/img/kits/{$server}/ultra.png" target="_blank"><img src="/img/kits/{$server}/ultra.png" alt="" class="fr-dib" style="width: 400px; float: right; margin-top: 20px!important;"></a>
-			<a class="highslide" href="/img/kits/{$server}/eggs.png" target="_blank"><img src="/img/kits/{$server}/eggs.png" alt="" class="fr-dib" style="width: 400px; margin-top: 20px!important;"></a>
+			<div style="display: inline-flex; justify-content: space-between; flex-wrap: wrap;">
+				<a class="highslide" href="/img/kits/{$server}/start.png" target="_blank"><img src="/img/kits/{$server}/start.png" alt="" class="fr-dib" style="width: 400px; margin-top: 20px!important;"></a>
+				<a class="highslide" href="/img/kits/{$server}/vip.png" target="_blank"><img src="/img/kits/{$server}/vip.png" alt="" class="fr-dib" style="width: 400px; margin-top: 20px!important;"></a>
+				<a class="highslide" href="/img/kits/{$server}/premium.png" target="_blank"><img src="/img/kits/{$server}/premium.png" alt="" class="fr-dib" style="width: 400px; margin-top: 20px!important;"></a>
+				<a class="highslide" href="/img/kits/{$server}/techpack.png" target="_blank"><img src="/img/kits/{$server}/techpack.png" alt="" class="fr-dib" style="width: 400px; margin-top: 20px!important;"></a>
+				<a class="highslide" href="/img/kits/{$server}/ultra.png" target="_blank"><img src="/img/kits/{$server}/ultra.png" alt="" class="fr-dib" style="width: 400px; margin-top: 20px!important;"></a>
+				<a class="highslide" href="/img/kits/{$server}/eggs.png" target="_blank"><img src="/img/kits/{$server}/eggs.png" alt="" class="fr-dib" style="width: 400px; margin-top: 20px!important;"></a>
+				<a class="highslide" href="/img/kits/{$server}/elite.png" target="_blank"><img src="/img/kits/{$server}/elite.png" alt="" class="fr-dib" style="width: 400px; margin-top: 20px!important;"></a>
+			</div>
 		{/if}
 	</div>
 </div>

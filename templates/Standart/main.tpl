@@ -8,6 +8,7 @@
 	<meta property="og:image" content="/uploads/fotos/LOGO_ICON.png">
 	<meta property="og:description" content="Комплексный майнкрафт проект. Classic, Hi-Tech, Magic.">
 	<meta property="og:url" content="https://hex-craft.ru/">
+	<meta name="yandex-verification" content="ab51aa63f7c3bc3b" />
 	{headers}
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/style_main.min.css?=v5">
@@ -63,6 +64,7 @@
                         <div class="nav-header d-flex justify-content-between align-items-center">
                             <a href="/" class="logo">
                                 <!--<img src="/img/NewYear.png" id="im" alt="Happy New Year!" style="position: absolute; left: -6px; top: -15px;">-->
+                                <img src="/img/pumpkin.svg" id="im" alt="Happy Halloween!" style="position: absolute;left: -5px;top: 25px;height: 40px;transform: rotate(350deg);">
                                 <img class="logo-img" src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E" id="im" alt="Hex-Craft">
 								<!-- <i class="fas fa-heart" style="color: #eef3fa;font-size: 26px;position: absolute;left: 26px;top: 15px;-webkit-text-stroke-width: 4px;-webkit-text-stroke-color: #2e3338;-webkit-transform: rotate(45deg);" aria-hidden="true"><use xlink:href="#icon-like"></use></i> -->
                             </a>

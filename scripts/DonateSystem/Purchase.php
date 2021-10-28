@@ -2,13 +2,6 @@
 
 require_once('/var/www/html/scripts/InitAll.php');
 
-function callback($title, $description) {
-	
-	$result = array('answer' => "<script>DLEalert('" . $description . "', '" . $title . "')</script>"); 
-	echo json_encode($result);
-	exit();
-}
-
 $type = isset($_GET['type']) ? $_GET['type'] : null;
 $hexels_count = isset($_GET['hexels_count']) ? $_GET['hexels_count'] : null;
 $server = isset($_GET['server']) ? $_GET['server'] : null;
@@ -46,8 +39,16 @@ switch ($type) {
 	$payment = 500;
 	break;
 	
-	case 'sponsor':
-	$payment = 1000;
+	case 'sponsor_gold':
+	$payment = 600;
+	break;
+	
+	case 'sponsor_ultra':
+	$payment = 1500;
+	break;
+	
+	case 'sponsor_elite':
+	$payment = 3000;
 	break;
 }
 
@@ -58,20 +59,23 @@ $GLOBALS['site_mysql']->query('UPDATE dle_users SET money = money-' . $payment .
 
 $server = $server. '_api';
 
-if ($no_prefix) $GLOBALS[$server]->sendCommand('lp user ' . $user . ' meta setprefix "&7[Игрок]&f"');
+if ($prefix) $GLOBALS[$server]->sendCommand('lp user ' . $user . ' meta setprefix "&7[Игрок]&f"');
 
 if ($type == 'hexels') {
 	$message = ' !Поздравляем, вы получили ' . $hexels_count . ' хекселей!';
-	$GLOBALS[$server]->sendCommand('money give ' . $user . " " . $hexels_count);
+	$command = 'money give ' . $user . " " . $hexels_count;
 	$type = $hexels_count . ' ' . $type;
 } else if ($type == 'fly') {
 	$message = ' !Поздравляем, вы получили полёт на 1 месяц!';
-	$GLOBALS[$server]->sendCommand('tfly ' . $user . ' 30d');
+	$command = 'tfly ' . $user . ' 30d';
+} else if (strpos($type, 'sponsor') !== false) {
+	$message = ' !Поздравляем, вы получили привилегию ' . strtoupper($type) . '!';
+	$command = 'lp user ' . $user . ' parent add ' . mb_substr($type, 8);
 } else {
 	$message = ' !Поздравляем, вы получили привилегию ' . strtoupper($type) . '!';
-	$GLOBALS[$server]->sendCommand('lp user ' . $user . ' parent addtemp ' . $type . ' "1mo"');
+	$command = 'lp user ' . $user . ' parent addtemp ' . $type . ' "1mo"';
 }
-
+$GLOBALS[$server]->sendCommand($command);
 $GLOBALS[$server]->sendCommand('cmi msg ' . $user . $message);
 if(!$silent) $GLOBALS[$server]->sendCommand('cmi broadcast Спасибо ' . $user . ' за приобретение ' . strtoupper($type) . '!');
 

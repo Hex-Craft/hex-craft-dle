@@ -8,6 +8,7 @@
 				<ul class="drop-vape serv">
 					<li><a href="/classic.html" title="Описание сервера Classic 1.16.2">Classic 1.16.2</a></li>
 					<li><a href="/hitech.html" title="Описание сервера Hi-Tech 1.12.2">Hi-Tech 1.12.2</a></li>
+					<li><a href="/magic.html" title="Описание сервера Magic 1.12.2">Magic 1.12.2</a></li>
 				</ul>
 			</div>
 		</div>

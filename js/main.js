@@ -38,7 +38,7 @@ else {
 
 document.getElementById("summary_players").innerHTML = parseInt(current_players)+parseInt(current_players2)+parseInt(current_players3);
 //swiper
-jQuery(document).ready(function($){var swiper=new Swiper('.swiper-container',{pagination:{el:'.swiper-pagination',},loop:true,navigation:{nextEl:'.swiper-button-next',prevEl:'.swiper-button-prev',},slidesPerView: 1,centeredSlides: false,slidesPerGroupSkip: 1,speed:500,autoplay:true,preloadImages:false,lazy:true,loadOnTransitionStart:true});});
+jQuery(document).ready(function($){var swiper=new Swiper('.swiper-container',{pagination:{el:'.swiper-pagination',},loop:true,navigation:{nextEl:'.swiper-button-next',prevEl:'.swiper-button-prev',},slidesPerView: 1,centeredSlides: false,slidesPerGroupSkip: 1,speed:1000,autoplay:true,preloadImages:false,lazy:true,loadOnTransitionStart:true});});
 //lazy-load
 document.addEventListener("DOMContentLoaded", function() {
   var lazyloadImages = document.querySelectorAll("img.lazy");    
@@ -183,8 +183,8 @@ switch(curr_loc) {
 		break;
 }
 //countdown
-/*
-const endDate = "22 Sep 2021";
+
+const endDate = "11 Nov 2021";
 
 function countdown() {
     const countDate = new Date(endDate);
@@ -216,4 +216,3 @@ function formatTime(time) {
 countdown();
 
 setInterval(countdown, 1000);
-*/

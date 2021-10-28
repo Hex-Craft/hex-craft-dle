@@ -32,13 +32,13 @@
                 line-height: 1;
             }
             .news-container {
-                width:372px;
+                width: 372px;
                 background-color: #222;
-                border: 5px solid #333;
-                border-bottom: none;
+                border-bottom: 1px solid #828282;
+				border-right: 18px solid #333;
             }
             .news-padding {
-                padding: 5px;
+                padding: 10px;
             }
             hr {
                 border: 1px solid #828282;

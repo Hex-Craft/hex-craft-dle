@@ -7,7 +7,7 @@ body {
 	
 	--background-color: var(--white);
     --text-color: #828282;
-	--body-background: #eef3fa url('/img/light_pattern.svg') repeat;
+	--body-background: #eef3fa url('/img/light_pattern_halloween.svg') repeat;
 	--name-intro: #2e3338;
 	--logo: invert(0%);
 	--news-link: var(--white);
@@ -31,7 +31,7 @@ body {
 	
 	--dark-background-color: #333;
     --dark-text-color: #828282;
-	--dark-body-background: #222 url('/img/dark_pattern.svg') repeat;
+	--dark-body-background: #222 url('/img/dark_pattern_halloween.svg') repeat;
 	
 	
 	background: var(--body-background);

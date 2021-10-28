@@ -41,6 +41,38 @@
 						<div class="swiper-slide">
 							
 							<div class="col-md-6" style="top: -22px;">
+								<img data-src="/icons/swiper5.png" width=200 height=250 style="position: relative; top: 35px; left: 95px;" class="swiper-lazy">
+								<div class="sphere carousel-color2 carousel-particle-big"></div>
+								<i class="far fa-square big-particle" aria-hidden="true"></i>
+								<i class="far fa-square small-particle" aria-hidden="true"></i>
+								<div class="sphere red-gradient-icon carousel-particle-small"></div>
+							</div>
+							
+                            <div class="col-text">
+                                <h3 class="name-intro">Розыгрыш</h3>
+                                <span class="hr-intro"></span>
+                                <p class="docopation-intro">
+                                    В честь Хэллоувина
+									<br>
+                                    <span style="font-size: 22px;color: #fe5c72;">Розыгрыш привилегии ELITE</span><br>
+									<span style="font-size: 19px;color: #fe5c72;">Осталось 
+										<span class="big-text" id="days">0</span>
+										<span>дней</span>
+										<span class="big-text" id="hours">0</span>
+										<span>часов</span>
+										<span class="big-text" id="mins">0</span>
+										<span>минут</span>
+										<span class="big-text" id="seconds">0</span>
+										<span>секунд</span>
+                                    </span>
+                                </p>
+								<a href="https://vk.com/hex_craft?w=wall-197635448_880" target="_blank" class="btn-drop" style="margin-bottom: 30px;"><i class="fas fa-play btn-icon" style="margin-top: 15px;"></i> Участвовать</a>
+                            </div>
+                        </div>
+						
+						<div class="swiper-slide">
+							
+							<div class="col-md-6" style="top: -22px;">
 								<img data-src="/icons/test3.png" width=277 height=249 class="img-carousel3 swiper-lazy">
 								<div class="sphere carousel-color3 carousel-particle-big"></div>
 								<i class="far fa-square big-particle" aria-hidden="true"></i>

@@ -30,7 +30,7 @@
 		<div class="donate-radios">
 			<div style="width: 640px; margin-bottom: 10px;">
 				<span style="font-size: 22px; padding: 3px 20px; position: absolute;">Кол-во хекселей:</span>
-				<input type="number" name="hexels_count" id="hexels" min="0" max="10000000" oninput="validity.valid||(value='');" style="float: right; width: 420px;">
+				<input type="number" name="hexels_count" id="hexels" min="0" max="10000000" step="1000" oninput="validity.valid||(value='');" style="float: right; width: 420px;">
 			</div>
 			<div class="form_radio_btn">
 				<input id="radio-0" type="radio" name="type" value="hexels">
